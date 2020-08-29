@@ -56,9 +56,9 @@ class TicTacToe
     @board.count {|cell| cell == "X" || cell == "O"}
   end
 
-def current_player(board)
-  turn_count(board).even? ? "X" : "O"
-end
+  def current_player(board)
+    turn_count(board).even? ? "X" : "O"
+  end
 
 def won?(board)
   WIN_COMBINATIONS.detect do |combo|
