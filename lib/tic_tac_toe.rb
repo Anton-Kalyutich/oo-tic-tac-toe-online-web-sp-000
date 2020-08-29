@@ -52,9 +52,9 @@ class TicTacToe
     display_board
   end
 
-def turn_count
-  @board.count {|cell| cell == "X" || cell == "O"}
-end
+  def turn_count
+    @board.count {|cell| cell == "X" || cell == "O"}
+  end
 
 def current_player(board)
   turn_count(board).even? ? "X" : "O"
