@@ -70,9 +70,9 @@ class TicTacToe
     @board.all? {|cell| cell == "X" || cell == "O"}
   end
 
-def draw?(board)
-  full?(board) && !won?(board)
-end
+  def draw?
+    full?(board) && !won?(board)
+  end
 
 def over?(board)
   won?(board) || draw?(board) || full?(board)
