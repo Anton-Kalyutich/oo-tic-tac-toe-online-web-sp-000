@@ -74,25 +74,25 @@ class TicTacToe
     full? && !won?
   end
 
-def over?(board)
-  won?(board) || draw?(board) || full?(board)
-end
+  def over?
+    won? || draw? || full?
+  end
 
-def winner(board)
-  if won?(board)
-    return board[won?(board)[0]]
-  else
-    return nil
+  def winner
+    if won?
+      return @board[won?[0]]
+    else
+      return nil
+    end
   end
-end
 
-def play(board)
-  until over?(board) do
-    turn(board)
+  def play
+    until over? do
+      turn
+    end
+    if won?
+      puts "Congratulations #{winner}!"
+    elsif draw?
+      puts "Cat's Game!"
+    end
   end
-  if won?(board)
-    puts "Congratulations #{winner(board)}!"
-  elsif draw?(board)
-    puts "Cat's Game!"
-  end
-end
