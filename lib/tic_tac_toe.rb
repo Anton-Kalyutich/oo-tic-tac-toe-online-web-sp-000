@@ -47,10 +47,10 @@ class TicTacToe
     if valid_move?(index)
       move(index, current_player)
     else
-    turn(board)
+      turn
+    end
+    display_board
   end
-   display_board(board)
-end
 
 def turn_count(board)
   board.count {|cell| cell == "X" || cell == "O"}
