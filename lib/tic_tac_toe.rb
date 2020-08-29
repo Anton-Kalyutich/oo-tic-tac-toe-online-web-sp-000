@@ -32,7 +32,7 @@ class TicTacToe
     @board
   end
 
-def position_taken?(board, index)
+def position_taken?(index)
   board[index] == "X" || board[index] == "O"
 end
 
